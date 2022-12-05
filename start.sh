@@ -10,7 +10,7 @@ source $HOME/.bashrc
 ###################### SSH #########################
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config ;
 SSHPASS=$(pwgen -s 15 1)
-(echo $PASS; echo $PASS) | passwd root
+(echo $SSHPASS; echo $SSHPASS) | passwd root
 service ssh start
 ####################################################
 LATEST=$(curl -s https://api.github.com/repos/SoftEtherVPN/SoftEtherVPN_Stable/releases/latest | jq -r '.assets[] | select(.name|match("linux-x64-64bit.tar.gz$")) | select(.name|match("vpnserver")) | .browser_download_url')
