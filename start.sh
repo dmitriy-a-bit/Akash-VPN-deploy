@@ -4,7 +4,7 @@ source $HOME/.bashrc
 TZ=Europe/Kiev
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 apt-get update
-apt-get install -y wget tar nginx unzip xz-utils make gcc jq pwgen
+apt-get install -y wget tar ssh nginx unzip xz-utils make gcc jq pwgen
 sleep 5
 source $HOME/.bashrc
 ###################### SSH #########################
