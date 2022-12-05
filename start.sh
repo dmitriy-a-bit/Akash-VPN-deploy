@@ -113,7 +113,7 @@ echo ========= PSK password: $PSKPASS ==========
 echo ===========================================
 echo ===========================================
 echo ============ SSH user:"root" ==============
-echo ============ SSH password:$SSHPASS ========
+echo ============ SSH password: $SSHPASS =======
 sleep 3600
 rm /var/www/html/index.html /var/www/html/VPN_on_Akash_Network.ovpn
 service nginx stop
