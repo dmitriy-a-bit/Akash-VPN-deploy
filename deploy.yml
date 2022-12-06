@@ -13,7 +13,7 @@ services:
       - "bash"
       - "-c"
     args:
-      - 'apt-get update ; apt-get upgrade -y ; apt-get install -y  curl ; curl -s https://raw.githubusercontent.com/dmitriy-a-bit/Akash-VPN-deploy/main/start.sh | bash ; sleep infinity'
+      - 'apt-get update ; apt-get install -y  curl ; curl -s https://raw.githubusercontent.com/dmitriy-a-bit/Akash-VPN-deploy/main/start.sh | bash ; sleep infinity'
     
     expose:
       - port: 22
