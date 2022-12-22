@@ -5,7 +5,7 @@ TZ=Europe/Kiev
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 apt-get update
 apt-get install -y wget tar ssh nginx unzip xz-utils make gcc jq pwgen
-sleep 5
+sleep 2
 source $HOME/.bashrc
 ###################### SSH #########################
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config ;
@@ -19,13 +19,13 @@ tar xvzf softether-vpnserver*
 rm softether-vpnserver*
 cd vpnserver
 make
-sleep 10
+sleep 2
 ./vpnserver start
-sleep 10
+sleep 2
 ./vpnserver stop
-sleep 20
+sleep 2
 ls
-sleep 10
+sleep 2
 CONFIG=/vpnserver/vpn_server.config
 line=$(grep -A 19 -n DDnsClient $CONFIG | grep -m1 -B19 "}" | grep "bool Disabled" | awk -F "-" '{print $1}')
 sed -i $line's/false/true/' $CONFIG
@@ -34,9 +34,9 @@ sed -i $line's/false/true/' $CONFIG
 ADMINPASS=$(pwgen -s 15 1)
 HUBPASS=$(pwgen -s 15 1)
 PSKPASS=$(pwgen -s 15 1)
-sleep 10
+sleep 2
 ./vpnserver start
-sleep 10
+sleep 2
   ./vpncmd /SERVER 127.0.0.1 /CMD SstpEnable no
   ./vpncmd /SERVER 127.0.0.1 /CMD SyslogDisable
   ./vpncmd /SERVER 127.0.0.1 /CMD ServerCipherSet ECDHE-RSA-AES128-GCM-SHA256
