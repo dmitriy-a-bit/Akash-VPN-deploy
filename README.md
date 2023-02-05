@@ -17,4 +17,4 @@ For example:
 6) Import certificate to OpenVPN in Windows or Android
 
     Have a fun!
-    Thanks to [Akash](https://github.com/ovrclk) and [Dimokus!](https://github.com/Dimokus88)
+    Thanks to [Akash](https://github.com/akash-network) and [Dimokus!](https://github.com/Dimokus88)
